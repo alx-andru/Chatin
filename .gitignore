@@ -39,8 +39,8 @@ Thumbs.db
 # dotCover
 *.dotCover
 
-Scripts/*
-!Scripts/app/
+Chatin/Scripts/*
+!Chatin/Scripts/app/
 
-Content/*
-!Content/app/
+Chatin/Content/*
+!Chatin/Content/app/

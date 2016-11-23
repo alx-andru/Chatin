@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chatin", "Chatin\Chatin.csproj", "{EC3F3F94-24D1-483A-90F6-D547A9A5A299}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chatin", "Chatin.csproj", "{EC3F3F94-24D1-483A-90F6-D547A9A5A299}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
