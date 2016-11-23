@@ -1,0 +1,168 @@
+﻿html, body {
+	width:100%;
+	height:100%;
+	display:flex;
+	padding:0;
+	margin:0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+*::selection {
+ background-color: #32145a;
+  color: #b4a0ff;
+}
+*::-moz-selection {
+ background-color: #32145a;
+  color: #b4a0ff;
+}
+
+.chatin {
+	width: 100%;
+	height:100%;
+	display:flex;
+	padding: 2rem;
+
+}
+.chatbox {
+	width:100%;
+	max-width: 25rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+}
+
+.chatbox__header {
+	width:100%;
+	height:4rem;
+	display:flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items:center;
+
+}
+
+.chatbox-header__chatroom  {
+	width:100%;
+	padding: 0 1rem;
+}
+
+.chatbox-header__chatroom a{
+	text-decoration: none;
+	color: #000;
+}
+
+.chatbox-header-chatroom__dropdown {
+	
+}
+
+.chatbox-header__refresh {
+	padding:0 1rem;
+}
+
+.chatbox__messages {
+	height:100vh;
+	overflow: scroll;
+
+
+}
+
+
+
+.chatbox-message {
+	width: 100%;
+	align-content:center;
+
+
+	padding: 0.5rem 0.5rem;
+
+
+}
+
+.chatbox-message-item {
+	display: flex;
+	flex-direction: row;
+	min-height: 100%;
+
+
+}
+.chatbox-message-item--right {
+	justify-content:flex-end;
+}
+
+.chatbox-message-item__author {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	padding: 0 0.5rem;
+	color: #deecf9;
+}
+
+
+.chatbox-message-item__text {
+	background-color: #71afe5;
+	padding: 0.5rem 1rem;
+	border-radius: 0.25rem;
+	order:2;
+	line-height:1.2rem;
+	min-height: 1.2rem;
+
+}
+
+.chatbox-message-item__text--right {
+	order:0;
+	background-color: #f8f8f8;
+	color: #333333;
+
+}
+
+.chatbox__actions {
+	width:100%;
+}
+
+.chatbox-actions {
+	display:flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-end;
+
+
+}
+.chatbox-actions__avatar {
+	padding: 0 1em;
+}
+
+.chatbox-actions__input {
+	width: 100%;
+	padding: 0 0 0 0rem;
+
+}
+
+.chatbox-actions__input * {
+	margin-bottom:0;
+}
+
+.chatbox-actions__input .ms-TextField.ms-TextField--placeholder .ms-Label {
+	color: #71afe5;
+
+}
+
+.chatbox-actions__input input {
+	background-color: #106ebe;
+	border-color: #106ebe;
+	color: #71afe5;
+
+}
+
+.chatbox-actions__send {
+	padding: 1rem;
+	margin-bottom: 0.5rem;
+}
