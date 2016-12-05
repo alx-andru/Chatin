@@ -1,1 +1,1 @@
-﻿<%@ Application Inherits="Chatin.Global" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="Chatin.WebApiApplication" Language="C#" %>

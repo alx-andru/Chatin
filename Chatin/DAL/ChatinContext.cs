@@ -1,21 +1,20 @@
-﻿
+﻿using Chatin.Models;
 using System.Data.Entity;
-using SQLite.CodeFirst;
+using System.Data.Entity.ModelConfiguration.Conventions;
 
-namespace Chatin
+namespace Chatin.DAL
 {
-	public class ChatinContext : DbContext
-	{
-		public ChatinContext() : base("chatin.sqlite") { }
+    public class ChatinContext : DbContext
+    {
+        public ChatinContext() : base("ChatinContext")
+        {
 
-		protected override void OnModelCreating(DbModelBuilder modelBuilder)
-		{
-			var sqliteConnectionInitializer = new SqliteCreateDatabaseIfNotExists<ChatinContext>(modelBuilder);
-			Database.SetInitializer(sqliteConnectionInitializer);
-		}
+        }
 
-		public DbSet<Message> Messages { get; set; }
+        public DbSet<Message> Messages { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Room> Rooms { get; set; }
+    }
 
 
-	}
 }

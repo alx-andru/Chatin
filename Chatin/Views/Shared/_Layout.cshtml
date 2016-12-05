@@ -2,19 +2,17 @@
 <html>
 <head>
     <title>@ViewBag.Title</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-	@Styles.Render("~/Content/fabric")
-	@Styles.Render("~/Content/css")
-
-	@Scripts.Render("~/Scripts/angular")
-
-	@Scripts.Render("~/Scripts/chatin")
+    @Styles.Render("~/Content/fabric")
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/Scripts/angular")
+    @Scripts.Render("~/Scripts/chatin")
 
 </head>
 <body ng-app="ChatinApp" class="ms-bgColor-themeDarker ms-font-l ms-fontColor-themeLighterAlt">
-	@RenderBody()
+    @RenderBody()
 </body>
 </html>

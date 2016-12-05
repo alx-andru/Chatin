@@ -1,50 +1,43 @@
 ﻿<div ng-controller="ChatinController" class="chatin">
-	<div class="chatbox ms-bgColor-themeDarkAlt">
-		<div class="chatbox__header ms-bgColor-neutralLighterAlt ms-fontColor-neutralDark">
-			<div class="chatbox-header__chatroom">
-				<a href ng-click="toggleMenu()">
-					<i class="ms-Icon ms-Icon--room"></i> {{activeRoom.name}} <i class="ms-Icon ms-Icon--caretDown"></i>
-				</a>
-				<uif-contextual-menu uif-is-open="isOpen">
-					<uif-contextual-menu-item ng-repeat="room in rooms track by $index">
-						<uif-content ng-click="joinRoom($index)">
-							<uif-icon uif-type="{{room.icon}}"></uif-icon> {{room.name}}
-						</uif-content>
-					</uif-contextual-menu-item>
-				</uif-contextual-menu>
-			</div>
-			<div class="chatbox-header__refresh" ng-click="refresh()">
-				<i class="ms-Icon ms-Icon--refresh" aria-hidden="true"></i>
-			</div>
-		</div>
+    <div class="chatbox ms-bgColor-themeDarkAlt">
+        <!-- Header -->
+        <div class="chatbox__header ms-bgColor-neutralLighterAlt ms-fontColor-neutralDark">
+            <div class="chatbox-header__chatroom">
+                <a href ng-click="toggleMenu()">
+                    <i class="ms-Icon ms-Icon--room"></i> {{activeRoom.name}} <i class="ms-Icon ms-Icon--caretDown"></i>
+                </a>
+                <uif-contextual-menu uif-is-open="isOpen">
+                    <uif-contextual-menu-item ng-repeat="room in rooms track by $index">
+                        <uif-content ng-click="joinRoom($index)">
+                            <uif-icon uif-type="{{room.icon}}"></uif-icon> {{room.name}}
+                        </uif-content>
+                    </uif-contextual-menu-item>
+                </uif-contextual-menu>
+            </div>
+            <div class="chatbox-header__refresh" ng-click="refresh()">
+                <i class="ms-Icon ms-Icon--refresh" aria-hidden="true"></i>
+            </div>
+        </div>
+        <!-- Messages -->
+        <messages-box messages="messages" user="user" timestamps="displayTimestamps" class="chatbox__messages"></messages-box>
+        
+        <div class="chatbox__actions ms-bgColor-themePrimary">
+            <div class="chatbox-actions">
 
-		<div class="chatbox__messages">
-			<div class="chatbox-message" ng-repeat="message in messages track by $index">
-				<div class="chatbox-message-item" ng-class="{'chatbox-message-item--right':isUser($index)}">
-					<span class="chatbox-message-item__text" ng-class="{'chatbox-message-item__text--right':isUser($index)}">{{message.text}}</span>
-					<span class="chatbox-message-item__author ms-font-m-plus">{{message.author}}</span>
-				</div>
-			</div>
-		</div>
+                <div class="chatbox-actions__avatar" ng-click="toggleUser()">
+                    <span class="ms-font-m">{{user.name}}</span>
+                </div>
 
-		<div class="chatbox__actions ms-bgColor-themePrimary">
-			<div class="chatbox-actions">
-				
-				<div class="chatbox-actions__avatar" ng-click="toggleUser()">
-					<span class="ms-font-m">{{user.name}}</span>
-				</div>
-				
-				<div  class="chatbox-actions__input">
-					<uif-textfield placeholder="Type your message..." ng-model="msg" />
-				</div>
+                <div class="chatbox-actions__input">
+                    <uif-textfield placeholder="Type your message..." ng-model="msg" />
+                </div>
 
-				<div class="chatbox-actions__send" ng-click="send()">
-					<i class="ms-Icon ms-Icon--chat" aria-hidden="true"></i>
-				</div>
-			</div>
+                <div class="chatbox-actions__send" ng-click="send()">
+                    <i class="ms-Icon ms-Icon--chat" aria-hidden="true"></i>
+                </div>
+            </div>
 
-		</div>
-	</div> 
+        </div>
+    </div>
 </div>
-
 

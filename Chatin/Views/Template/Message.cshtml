@@ -1,0 +1,11 @@
+﻿@{ Layout = "";}
+
+    <div class="chatbox-message" ng-repeat="message in messages track by $index">
+        <div class="chatbox-message-item" ng-class="{'chatbox-message-item--right':isUser($index)}">
+            <div>
+                <span class="chatbox-message-item__text" ng-class="{'chatbox-message-item__text--right':isUser($index)}">{{message.text}}</span>
+                <span class="chatbox-message-item__time ms-font-mi" ng-if="displayTime($index)" am-time-ago="message.timestamp | amParse:'YYYY-MM-DDTHH:mm:ss'"></span>
+            </div>
+            <span class="chatbox-message-item__author ms-font-m-plus">{{message.user.name}}</span>
+        </div>
+    </div>
