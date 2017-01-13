@@ -2,13 +2,26 @@
 
     <div class="chatbox-message" ng-repeat="message in messages track by $index">
         {{previous = ($index-1)>=0?$index-1:0; ""}}
-        <div class="chatbox-message__date" ng-if="(message.timestamp |  amDateFormat:'DD.MM.YYYY') !== (messages[previous].timestamp | amDateFormat: 'DD.MM.YYYY') || ($index-1)==-1">{{message.timestamp | amDateFormat:'DD.MM.YYYY'}}</div>
+        <div class="chatbox-message__date" 
+             ng-if="(message.timestamp |  amDateFormat:'DD.MM.YYYY') !== (messages[previous].timestamp | amDateFormat: 'DD.MM.YYYY') 
+             || ($index-1)==-1">
+            {{message.timestamp | amDateFormat:'DD.MM.YYYY'}}
+        </div>
 
         <div class="chatbox-message-item" ng-class="{'chatbox-message-item--right':isUser($index)}">
             <div>
-                <span class="chatbox-message-item__text" ng-class="{'chatbox-message-item__text--right':isUser($index)}">{{message.text}}</span>
-                <span class="chatbox-message-item__time ms-font-mi"  ng-class="{'chatbox-message-item__time--right':isUser($index)}" ng-if="displayTime($index)">{{message.timestamp | amDateFormat:'HH:mm'}}</span>
+                <span class="chatbox-message-item__text" 
+                      ng-class="{'chatbox-message-item__text--right':isUser($index)}">
+                    {{message.text}}
+                </span>
+                <span class="chatbox-message-item__time ms-font-mi"  
+                      ng-class="{'chatbox-message-item__time--right':isUser($index)}" 
+                      ng-if="displayTime($index)">
+                    {{message.timestamp | amDateFormat:'HH:mm'}}
+                </span>
             </div>
-            <span class="chatbox-message-item__author ms-font-m-plus"  ng-class="{'chatbox-message-item__author--right':isUser($index)}">{{message.user.name}}</span>
+            <span class="chatbox-message-item__author ms-font-m-plus"  
+                  ng-class="{'chatbox-message-item__author--right':isUser($index)}">{{message.user.name}}
+            </span>
         </div>
     </div>

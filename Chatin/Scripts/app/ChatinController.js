@@ -59,7 +59,6 @@ chatin.directive('messagesBox', function ($timeout) {
         templateUrl: '../Template/Message',
         link: function (scope, element) {
             scope.isUser = function(idx){
-                console.log('user');
                 return scope.messages[idx].user.name === scope.user.name;
             };
 
