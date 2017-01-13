@@ -84,7 +84,7 @@ chatin.directive('messagesBox', function ($timeout) {
 });
 
 chatin.controller('ChatinController', function ($scope, Users, Rooms, Messages, moment) {
-
+    // temporary storage where to display timestamps
     $scope.displayTimestamps = [];
 
     // Initialize chat, based on server and in order.
@@ -103,7 +103,8 @@ chatin.controller('ChatinController', function ($scope, Users, Rooms, Messages, 
     });
 
     function determineActiveTimestamps(messages) {
-        // console.log(result);
+        // reset timestamps
+        $scope.displayTimestamps = [];
         var currentGroup;
 
         for (var msgIdx = messages.length - 1; msgIdx >= 0; msgIdx--) {

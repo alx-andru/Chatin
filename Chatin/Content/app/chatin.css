@@ -84,7 +84,12 @@
 
 
 }
-
+.chatbox-message__date {
+    width: 100%;
+    text-align:center;
+    height: 1.2rem;
+    margin-bottom:1rem;
+}
 .chatbox-message-item {
 	display: flex;
 	flex-direction: row;
@@ -102,6 +107,11 @@
 	justify-content: flex-start;
 	padding: 0 0.5rem;
 	color: #deecf9;
+    order:-1;
+}
+
+.chatbox-message-item__author--right {
+	order: 0;
 }
 
 
@@ -124,8 +134,13 @@
 
 .chatbox-message-item__time {
 	display:block;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.25rem;
     padding-bottom: 1rem;
+
+}
+
+.chatbox-message-item__time--right {
+	text-align:right;
 
 }
 
