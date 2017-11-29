@@ -12,7 +12,7 @@ namespace Chatin
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
+            // useless comment
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
